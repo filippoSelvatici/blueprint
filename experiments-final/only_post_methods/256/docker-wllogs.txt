@@ -1,0 +1,1135 @@
++ pushd build
+~/blueprint/examples/sockshop/build ~/blueprint/examples/sockshop
++ set -a
++ source .env
+++ CART_DB_BIND_ADDR=0.0.0.0:12345
+++ CART_DB_DIAL_ADDR=cart_db:12345
+++ CART_SERVICE_GRPC_BIND_ADDR=0.0.0.0:12346
+++ CART_SERVICE_GRPC_DIAL_ADDR=cart_service:12346
+++ CATALOGUE_DB_BIND_ADDR=0.0.0.0:12347
+++ CATALOGUE_DB_DIAL_ADDR=catalogue_db:12347
+++ CATALOGUE_SERVICE_GRPC_BIND_ADDR=0.0.0.0:12348
+++ CATALOGUE_SERVICE_GRPC_DIAL_ADDR=catalogue_service:12348
+++ FRONTEND_HTTP_BIND_ADDR=0.0.0.0:12349
+++ FRONTEND_HTTP_DIAL_ADDR=frontend:12349
+++ ORDER_DB_BIND_ADDR=0.0.0.0:12350
+++ ORDER_DB_DIAL_ADDR=order_db:12350
+++ ORDER_SERVICE_GRPC_BIND_ADDR=0.0.0.0:12351
+++ ORDER_SERVICE_GRPC_DIAL_ADDR=order_service:12351
+++ PAYMENT_SERVICE_GRPC_BIND_ADDR=0.0.0.0:12352
+++ PAYMENT_SERVICE_GRPC_DIAL_ADDR=payment_service:12352
+++ SHIPPING_DB_BIND_ADDR=0.0.0.0:12353
+++ SHIPPING_DB_DIAL_ADDR=shipping_db:12353
+++ SHIPPING_SERVICE_GRPC_BIND_ADDR=0.0.0.0:12354
+++ SHIPPING_SERVICE_GRPC_DIAL_ADDR=shipping_service:12354
+++ USER_DB_BIND_ADDR=0.0.0.0:12355
+++ USER_DB_DIAL_ADDR=user_db:12355
+++ USER_SERVICE_GRPC_BIND_ADDR=0.0.0.0:12356
+++ USER_SERVICE_GRPC_DIAL_ADDR=user_service:12356
++ set +a
++ ./wlgen/wlgen_proc/wlgen_proc/wlgen_proc
+2025/06/04 04:02:39 INFO Running wlgen.proc
+2025/06/04 04:02:39 INFO frontend.http.dial_addr = frontend:12349
+2025/06/04 04:02:39 INFO wlgen.proc built wlgen.proc.stdoutmetriccollector (*opentelemetry.StdoutMetricCollector)
+2025/06/04 04:02:39 INFO wlgen.proc built wlgen.proc.logger (*slogger.SLogger)
+2025/06/04 04:02:39 INFO wlgen.proc built frontend.clientpool (*pool.Frontend_ClientPool)
+2025/06/04 04:02:39 INFO wlgen.proc built frontend.client (*pool.Frontend_ClientPool)
+2025/06/04 04:02:39 INFO wlgen.proc built wlgen.service (*workloadgen.complexWldGen)
+2025/06/04 04:02:39 INFO wlgen.proc running wlgen.service
+2025/06/04 04:02:39 INFO wlgen.proc built frontend.http.dial_addr (string) = frontend:12349
+2025/06/04 04:02:39 INFO frontend.clientpool.0 built frontend.http_client (*http.Frontend_HTTPClient)
+Application initialized successfully.
+2025/06/04 04:02:39 Target throughput 256
+2025/06/04 04:02:39 Ticking after every 3.90625ms
+2025/06/04 04:02:39 INFO frontend.clientpool.1 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:02:43 Sent 1000 requests
+2025/06/04 04:02:43 Processed 1000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:02:47 Sent 2000 requests
+2025/06/04 04:02:47 Processed 2000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:02:51 Sent 3000 requests
+2025/06/04 04:02:51 Processed 3000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:02:54 Sent 4000 requests
+2025/06/04 04:02:54 Processed 4000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:02:58 Sent 5000 requests
+2025/06/04 04:02:58 Processed 5000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:02 Sent 6000 requests
+2025/06/04 04:03:02 Processed 6000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:06 Sent 7000 requests
+2025/06/04 04:03:06 Processed 7000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:10 Sent 8000 requests
+2025/06/04 04:03:10 Processed 8000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:14 Sent 9000 requests
+2025/06/04 04:03:14 Processed 9000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:17 INFO frontend.clientpool.2 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:18 Sent 10000 requests
+2025/06/04 04:03:18 Processed 10000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:22 Sent 11000 requests
+2025/06/04 04:03:22 Processed 11000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:26 Sent 12000 requests
+2025/06/04 04:03:26 Processed 12000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:30 Sent 13000 requests
+2025/06/04 04:03:30 Processed 13000 requests
+2025/06/04 04:03:30 INFO frontend.clientpool.3 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:34 Sent 14000 requests
+2025/06/04 04:03:34 Processed 14000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:37 Sent 15000 requests
+2025/06/04 04:03:37 Processed 15000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:41 Sent 16000 requests
+2025/06/04 04:03:41 Processed 16000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:43 INFO frontend.clientpool.4 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:45 Sent 17000 requests
+2025/06/04 04:03:45 Processed 17000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:49 Sent 18000 requests
+2025/06/04 04:03:49 Processed 18000 requests
+2025/06/04 04:03:49 INFO frontend.clientpool.5 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:53 Sent 19000 requests
+2025/06/04 04:03:53 Processed 19000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:54 INFO frontend.clientpool.6 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/04 04:03:55 INFO frontend.clientpool.7 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/04 04:03:56 INFO frontend.clientpool.8 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/04 04:03:56 INFO frontend.clientpool.9 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:03:57 Sent 20000 requests
+2025/06/04 04:03:57 Processed 20000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:01 Sent 21000 requests
+2025/06/04 04:04:01 Processed 21000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+2025/06/04 04:04:05 Sent 22000 requests
+2025/06/04 04:04:05 Processed 22000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:09 Sent 23000 requests
+2025/06/04 04:04:09 Processed 23000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:13 Sent 24000 requests
+2025/06/04 04:04:13 Processed 24000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:16 Sent 25000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:18 Processed 25000 requests
+2025/06/04 04:04:20 Sent 26000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:23 Processed 26000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:24 Sent 27000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:28 Processed 27000 requests
+2025/06/04 04:04:28 Sent 28000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:04:32 Sent 29000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:33 Processed 28000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:36 Sent 30000 requests
+2025/06/04 04:04:38 Processed 29000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:40 Sent 31000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:04:44 Sent 32000 requests
+2025/06/04 04:04:44 Processed 30000 requests
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:48 Sent 33000 requests
+2025/06/04 04:04:50 Processed 31000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:52 Sent 34000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:56 Sent 35000 requests
+2025/06/04 04:04:56 Processed 32000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:04:59 Sent 36000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:02 Processed 33000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:03 Sent 37000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:05:07 Sent 38000 requests
+2025/06/04 04:05:08 Processed 34000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:05:11 Sent 39000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:15 Processed 35000 requests
+2025/06/04 04:05:15 Sent 40000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:05:19 Sent 41000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:05:22 Processed 36000 requests
+2025/06/04 04:05:23 Sent 42000 requests
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:27 Sent 43000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:05:29 Processed 37000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:31 Sent 44000 requests
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:05:35 Sent 45000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+2025/06/04 04:05:36 Processed 38000 requests
+2025/06/04 04:05:39 Sent 46000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:42 Sent 47000 requests
+2025/06/04 04:05:43 Processed 39000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:05:46 Sent 48000 requests
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:50 Sent 49000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:05:51 Processed 40000 requests
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+2025/06/04 04:05:54 Sent 50000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+2025/06/04 04:05:58 Sent 51000 requests
+2025/06/04 04:05:59 Processed 41000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:06:02 Sent 52000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:06 Sent 53000 requests
+Error in PostCard: StatusCode was 500
+2025/06/04 04:06:06 Processed 42000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:10 Sent 54000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:14 Sent 55000 requests
+2025/06/04 04:06:15 Processed 43000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:18 Sent 56000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:06:21 Sent 57000 requests
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:23 Processed 44000 requests
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:25 Sent 58000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+2025/06/04 04:06:29 Sent 59000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:06:31 Processed 45000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:06:33 Sent 60000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:37 Sent 61000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:06:40 Processed 46000 requests
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:41 Sent 62000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:06:45 Sent 63000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:06:49 Processed 47000 requests
+2025/06/04 04:06:49 Sent 64000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:06:53 Sent 65000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:06:57 Sent 66000 requests
+Error in PostCard: StatusCode was 500
+2025/06/04 04:06:58 Processed 48000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:01 Sent 67000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+2025/06/04 04:07:04 Sent 68000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:07 Processed 49000 requests
+2025/06/04 04:07:08 Sent 69000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:12 Sent 70000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:16 Processed 50000 requests
+2025/06/04 04:07:16 Sent 71000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:07:20 Sent 72000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:24 Sent 73000 requests
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:07:26 Processed 51000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:28 Sent 74000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:07:32 Sent 75000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:07:35 Processed 52000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:36 Sent 76000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:07:45 Processed 53000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:07:55 Processed 54000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:08:05 Processed 55000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:08:16 Processed 56000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:08:26 Processed 57000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:08:38 Processed 58000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:08:49 Processed 59000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:09:01 Processed 60000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:09:12 Processed 61000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:09:25 Processed 62000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:09:37 Processed 63000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:09:49 Processed 64000 requests
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:10:02 Processed 65000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/04 04:10:15 Processed 66000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:10:28 Processed 67000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:10:41 Processed 68000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:10:55 Processed 69000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:11:09 Processed 70000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:11:22 Processed 71000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:11:36 Processed 72000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:11:51 Processed 73000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+2025/06/04 04:12:05 Processed 74000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:12:20 Processed 75000 requests
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:12:34 Processed 76000 requests
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostCard: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in PostAddress: StatusCode was 500
+Error in PostAddress: StatusCode was 500
+Error in PostCard: StatusCode was 500
+2025/06/04 04:12:46 Finished all requests
+########## Total ##########
+Total Number of Requests: 76779
+Successful Requests: 76070
+Error Responses: 709
+Average Latency: 7.380061408461601e+10
+########## PostAddress ##########
+Total Number of Requests: 38209
+Successful Requests: 37759
+Error Responses: 450
+Average Latency: 7.416909158547385e+10
+########## PostCard ##########
+Total Number of Requests: 38570
+Successful Requests: 38311
+Error Responses: 259
+Average Latency: 7.343558538795341e+10
+2025/06/04 04:12:46 INFO wlgen.proc wlgen.service exited
+2025/06/04 04:12:46 INFO wlgen.proc exiting
++ popd
+~/blueprint/examples/sockshop

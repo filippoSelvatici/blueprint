@@ -1,0 +1,628 @@
++ pushd build
+~/blueprint/examples/sockshop/build ~/blueprint/examples/sockshop
++ set -a
++ source .env
+++ CART_DB_BIND_ADDR=0.0.0.0:12345
+++ CART_DB_DIAL_ADDR=cart_db:12345
+++ CART_SERVICE_NP_BIND_ADDR=0.0.0.0:12346
+++ CART_SERVICE_NP_DIAL_ADDR=cart_service:12346
+++ CATALOGUE_DB_BIND_ADDR=0.0.0.0:12347
+++ CATALOGUE_DB_DIAL_ADDR=catalogue_db:12347
+++ CATALOGUE_SERVICE_NP_BIND_ADDR=0.0.0.0:12348
+++ CATALOGUE_SERVICE_NP_DIAL_ADDR=catalogue_service:12348
+++ FRONTEND_HTTP_BIND_ADDR=0.0.0.0:12349
+++ FRONTEND_HTTP_DIAL_ADDR=frontend:12349
+++ ORDER_DB_BIND_ADDR=0.0.0.0:12350
+++ ORDER_DB_DIAL_ADDR=order_db:12350
+++ ORDER_SERVICE_NP_BIND_ADDR=0.0.0.0:12351
+++ ORDER_SERVICE_NP_DIAL_ADDR=order_service:12351
+++ PAYMENT_SERVICE_NP_BIND_ADDR=0.0.0.0:12352
+++ PAYMENT_SERVICE_NP_DIAL_ADDR=payment_service:12352
+++ SHIPPING_DB_BIND_ADDR=0.0.0.0:12353
+++ SHIPPING_DB_DIAL_ADDR=shipping_db:12353
+++ SHIPPING_SERVICE_NP_BIND_ADDR=0.0.0.0:12354
+++ SHIPPING_SERVICE_NP_DIAL_ADDR=shipping_service:12354
+++ USER_DB_BIND_ADDR=0.0.0.0:12355
+++ USER_DB_DIAL_ADDR=user_db:12355
+++ USER_SERVICE_NP_BIND_ADDR=0.0.0.0:12356
+++ USER_SERVICE_NP_DIAL_ADDR=user_service:12356
++ set +a
++ ./wlgen/wlgen_proc/wlgen_proc/wlgen_proc
+2025/06/03 21:51:25 INFO Running wlgen.proc
+2025/06/03 21:51:25 INFO frontend.http.dial_addr = frontend:12349
+2025/06/03 21:51:25 INFO wlgen.proc built wlgen.proc.stdoutmetriccollector (*opentelemetry.StdoutMetricCollector)
+2025/06/03 21:51:25 INFO wlgen.proc built wlgen.proc.logger (*slogger.SLogger)
+2025/06/03 21:51:25 INFO wlgen.proc built frontend.clientpool (*pool.Frontend_ClientPool)
+2025/06/03 21:51:25 INFO wlgen.proc built frontend.client (*pool.Frontend_ClientPool)
+2025/06/03 21:51:25 INFO wlgen.proc built wlgen.service (*workloadgen.complexWldGen)
+2025/06/03 21:51:25 INFO wlgen.proc running wlgen.service
+2025/06/03 21:51:25 INFO wlgen.proc built frontend.http.dial_addr (string) = frontend:12349
+2025/06/03 21:51:25 INFO frontend.clientpool.0 built frontend.http_client (*http.Frontend_HTTPClient)
+Application initialized successfully.
+2025/06/03 21:51:28 Target throughput 768
+2025/06/03 21:51:28 Ticking after every 1.302083ms
+2025/06/03 21:51:28 INFO frontend.clientpool.1 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:28 INFO frontend.clientpool.2 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:28 INFO frontend.clientpool.3 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:28 INFO frontend.clientpool.4 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:28 INFO frontend.clientpool.5 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:28 INFO frontend.clientpool.6 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:28 INFO frontend.clientpool.7 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:28 INFO frontend.clientpool.8 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:28 INFO frontend.clientpool.9 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/03 21:51:30 Sent 1000 requests
+2025/06/03 21:51:30 Processed 1000 requests
+2025/06/03 21:51:31 Sent 2000 requests
+2025/06/03 21:51:31 Processed 2000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:32 Sent 3000 requests
+2025/06/03 21:51:32 Processed 3000 requests
+2025/06/03 21:51:34 Sent 4000 requests
+2025/06/03 21:51:34 Processed 4000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:35 Sent 5000 requests
+2025/06/03 21:51:35 Processed 5000 requests
+2025/06/03 21:51:36 Sent 6000 requests
+2025/06/03 21:51:36 Processed 6000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:37 Sent 7000 requests
+2025/06/03 21:51:37 Processed 7000 requests
+2025/06/03 21:51:39 Sent 8000 requests
+2025/06/03 21:51:39 Processed 8000 requests
+2025/06/03 21:51:40 Sent 9000 requests
+2025/06/03 21:51:40 Processed 9000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:41 Sent 10000 requests
+2025/06/03 21:51:41 Processed 10000 requests
+2025/06/03 21:51:43 Sent 11000 requests
+2025/06/03 21:51:43 Processed 11000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:44 Sent 12000 requests
+2025/06/03 21:51:44 Processed 12000 requests
+2025/06/03 21:51:45 Sent 13000 requests
+2025/06/03 21:51:45 Processed 13000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:47 Sent 14000 requests
+2025/06/03 21:51:47 Processed 14000 requests
+2025/06/03 21:51:48 Sent 15000 requests
+2025/06/03 21:51:48 Processed 15000 requests
+2025/06/03 21:51:49 Sent 16000 requests
+2025/06/03 21:51:49 Processed 16000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:50 Sent 17000 requests
+2025/06/03 21:51:50 Processed 17000 requests
+2025/06/03 21:51:52 Sent 18000 requests
+2025/06/03 21:51:52 Processed 18000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:53 Sent 19000 requests
+2025/06/03 21:51:53 Processed 19000 requests
+2025/06/03 21:51:54 Sent 20000 requests
+2025/06/03 21:51:54 Processed 20000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:51:56 Sent 21000 requests
+2025/06/03 21:51:56 Processed 21000 requests
+2025/06/03 21:51:57 Sent 22000 requests
+2025/06/03 21:51:57 Processed 22000 requests
+2025/06/03 21:51:58 Sent 23000 requests
+2025/06/03 21:51:58 Processed 23000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:00 Sent 24000 requests
+2025/06/03 21:52:00 Processed 24000 requests
+2025/06/03 21:52:01 Sent 25000 requests
+2025/06/03 21:52:01 Processed 25000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:02 Sent 26000 requests
+2025/06/03 21:52:02 Processed 26000 requests
+2025/06/03 21:52:03 Sent 27000 requests
+2025/06/03 21:52:03 Processed 27000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:05 Sent 28000 requests
+2025/06/03 21:52:05 Processed 28000 requests
+2025/06/03 21:52:06 Sent 29000 requests
+2025/06/03 21:52:06 Processed 29000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:07 Sent 30000 requests
+2025/06/03 21:52:07 Processed 30000 requests
+2025/06/03 21:52:09 Sent 31000 requests
+2025/06/03 21:52:09 Processed 31000 requests
+2025/06/03 21:52:10 Sent 32000 requests
+2025/06/03 21:52:10 Processed 32000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:11 Sent 33000 requests
+2025/06/03 21:52:11 Processed 33000 requests
+2025/06/03 21:52:13 Sent 34000 requests
+2025/06/03 21:52:13 Processed 34000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:14 Sent 35000 requests
+2025/06/03 21:52:14 Processed 35000 requests
+2025/06/03 21:52:15 Sent 36000 requests
+2025/06/03 21:52:15 Processed 36000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:17 Sent 37000 requests
+2025/06/03 21:52:17 Processed 37000 requests
+2025/06/03 21:52:18 Sent 38000 requests
+2025/06/03 21:52:18 Processed 38000 requests
+2025/06/03 21:52:19 Sent 39000 requests
+2025/06/03 21:52:19 Processed 39000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:20 Sent 40000 requests
+2025/06/03 21:52:20 Processed 40000 requests
+2025/06/03 21:52:22 Sent 41000 requests
+2025/06/03 21:52:22 Processed 41000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:23 Sent 42000 requests
+2025/06/03 21:52:23 Processed 42000 requests
+2025/06/03 21:52:24 Sent 43000 requests
+2025/06/03 21:52:24 Processed 43000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:26 Sent 44000 requests
+2025/06/03 21:52:26 Processed 44000 requests
+2025/06/03 21:52:27 Sent 45000 requests
+2025/06/03 21:52:27 Processed 45000 requests
+2025/06/03 21:52:28 Sent 46000 requests
+2025/06/03 21:52:28 Processed 46000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:30 Sent 47000 requests
+2025/06/03 21:52:30 Processed 47000 requests
+2025/06/03 21:52:31 Sent 48000 requests
+2025/06/03 21:52:31 Processed 48000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:32 Sent 49000 requests
+2025/06/03 21:52:32 Processed 49000 requests
+2025/06/03 21:52:33 Sent 50000 requests
+2025/06/03 21:52:33 Processed 50000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:35 Sent 51000 requests
+2025/06/03 21:52:35 Processed 51000 requests
+2025/06/03 21:52:36 Sent 52000 requests
+2025/06/03 21:52:36 Processed 52000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:37 Sent 53000 requests
+2025/06/03 21:52:37 Processed 53000 requests
+2025/06/03 21:52:39 Sent 54000 requests
+2025/06/03 21:52:39 Processed 54000 requests
+2025/06/03 21:52:40 Sent 55000 requests
+2025/06/03 21:52:40 Processed 55000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:41 Sent 56000 requests
+2025/06/03 21:52:41 Processed 56000 requests
+2025/06/03 21:52:43 Sent 57000 requests
+2025/06/03 21:52:43 Processed 57000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:44 Sent 58000 requests
+2025/06/03 21:52:44 Processed 58000 requests
+2025/06/03 21:52:45 Sent 59000 requests
+2025/06/03 21:52:45 Processed 59000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:46 Sent 60000 requests
+2025/06/03 21:52:46 Processed 60000 requests
+2025/06/03 21:52:48 Sent 61000 requests
+2025/06/03 21:52:48 Processed 61000 requests
+2025/06/03 21:52:49 Sent 62000 requests
+2025/06/03 21:52:49 Processed 62000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:50 Sent 63000 requests
+2025/06/03 21:52:50 Processed 63000 requests
+2025/06/03 21:52:52 Sent 64000 requests
+2025/06/03 21:52:52 Processed 64000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:53 Sent 65000 requests
+2025/06/03 21:52:53 Processed 65000 requests
+2025/06/03 21:52:54 Sent 66000 requests
+2025/06/03 21:52:54 Processed 66000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:56 Sent 67000 requests
+2025/06/03 21:52:56 Processed 67000 requests
+2025/06/03 21:52:57 Sent 68000 requests
+2025/06/03 21:52:57 Processed 68000 requests
+2025/06/03 21:52:58 Sent 69000 requests
+2025/06/03 21:52:58 Processed 69000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:52:59 Sent 70000 requests
+2025/06/03 21:52:59 Processed 70000 requests
+2025/06/03 21:53:01 Sent 71000 requests
+2025/06/03 21:53:01 Processed 71000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:02 Sent 72000 requests
+2025/06/03 21:53:02 Processed 72000 requests
+2025/06/03 21:53:03 Sent 73000 requests
+2025/06/03 21:53:03 Processed 73000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:05 Sent 74000 requests
+2025/06/03 21:53:05 Processed 74000 requests
+2025/06/03 21:53:06 Sent 75000 requests
+2025/06/03 21:53:06 Processed 75000 requests
+2025/06/03 21:53:07 Sent 76000 requests
+2025/06/03 21:53:07 Processed 76000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:09 Sent 77000 requests
+2025/06/03 21:53:09 Processed 77000 requests
+2025/06/03 21:53:10 Sent 78000 requests
+2025/06/03 21:53:10 Processed 78000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:11 Sent 79000 requests
+2025/06/03 21:53:11 Processed 79000 requests
+2025/06/03 21:53:13 Sent 80000 requests
+2025/06/03 21:53:13 Processed 80000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:14 Sent 81000 requests
+2025/06/03 21:53:14 Processed 81000 requests
+2025/06/03 21:53:15 Sent 82000 requests
+2025/06/03 21:53:15 Processed 82000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:16 Sent 83000 requests
+2025/06/03 21:53:16 Processed 83000 requests
+2025/06/03 21:53:18 Sent 84000 requests
+2025/06/03 21:53:18 Processed 84000 requests
+2025/06/03 21:53:19 Sent 85000 requests
+2025/06/03 21:53:19 Processed 85000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:20 Sent 86000 requests
+2025/06/03 21:53:20 Processed 86000 requests
+2025/06/03 21:53:22 Sent 87000 requests
+2025/06/03 21:53:22 Processed 87000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:23 Sent 88000 requests
+2025/06/03 21:53:23 Processed 88000 requests
+2025/06/03 21:53:24 Sent 89000 requests
+2025/06/03 21:53:24 Processed 89000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:26 Sent 90000 requests
+2025/06/03 21:53:26 Processed 90000 requests
+2025/06/03 21:53:27 Sent 91000 requests
+2025/06/03 21:53:27 Processed 91000 requests
+2025/06/03 21:53:28 Sent 92000 requests
+2025/06/03 21:53:28 Processed 92000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:29 Sent 93000 requests
+2025/06/03 21:53:29 Processed 93000 requests
+2025/06/03 21:53:31 Sent 94000 requests
+2025/06/03 21:53:31 Processed 94000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:32 Sent 95000 requests
+2025/06/03 21:53:32 Processed 95000 requests
+2025/06/03 21:53:33 Sent 96000 requests
+2025/06/03 21:53:33 Processed 96000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:35 Sent 97000 requests
+2025/06/03 21:53:35 Processed 97000 requests
+2025/06/03 21:53:36 Sent 98000 requests
+2025/06/03 21:53:36 Processed 98000 requests
+2025/06/03 21:53:37 Sent 99000 requests
+2025/06/03 21:53:37 Processed 99000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:39 Sent 100000 requests
+2025/06/03 21:53:39 Processed 100000 requests
+2025/06/03 21:53:40 Sent 101000 requests
+2025/06/03 21:53:40 Processed 101000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:41 Sent 102000 requests
+2025/06/03 21:53:41 Processed 102000 requests
+2025/06/03 21:53:42 Sent 103000 requests
+2025/06/03 21:53:42 Processed 103000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:44 Sent 104000 requests
+2025/06/03 21:53:44 Processed 104000 requests
+2025/06/03 21:53:45 Sent 105000 requests
+2025/06/03 21:53:45 Processed 105000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:46 Sent 106000 requests
+2025/06/03 21:53:46 Processed 106000 requests
+2025/06/03 21:53:48 Sent 107000 requests
+2025/06/03 21:53:48 Processed 107000 requests
+2025/06/03 21:53:49 Sent 108000 requests
+2025/06/03 21:53:49 Processed 108000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:50 Sent 109000 requests
+2025/06/03 21:53:50 Processed 109000 requests
+2025/06/03 21:53:52 Sent 110000 requests
+2025/06/03 21:53:52 Processed 110000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:53 Sent 111000 requests
+2025/06/03 21:53:53 Processed 111000 requests
+2025/06/03 21:53:54 Sent 112000 requests
+2025/06/03 21:53:54 Processed 112000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:55 Sent 113000 requests
+2025/06/03 21:53:55 Processed 113000 requests
+2025/06/03 21:53:57 Sent 114000 requests
+2025/06/03 21:53:57 Processed 114000 requests
+2025/06/03 21:53:58 Sent 115000 requests
+2025/06/03 21:53:58 Processed 115000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:53:59 Sent 116000 requests
+2025/06/03 21:53:59 Processed 116000 requests
+2025/06/03 21:54:01 Sent 117000 requests
+2025/06/03 21:54:01 Processed 117000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:02 Sent 118000 requests
+2025/06/03 21:54:02 Processed 118000 requests
+2025/06/03 21:54:03 Sent 119000 requests
+2025/06/03 21:54:03 Processed 119000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:05 Sent 120000 requests
+2025/06/03 21:54:05 Processed 120000 requests
+2025/06/03 21:54:06 Sent 121000 requests
+2025/06/03 21:54:06 Processed 121000 requests
+2025/06/03 21:54:07 Sent 122000 requests
+2025/06/03 21:54:07 Processed 122000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:08 Sent 123000 requests
+2025/06/03 21:54:08 Processed 123000 requests
+2025/06/03 21:54:10 Sent 124000 requests
+2025/06/03 21:54:10 Processed 124000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:11 Sent 125000 requests
+2025/06/03 21:54:11 Processed 125000 requests
+2025/06/03 21:54:12 Sent 126000 requests
+2025/06/03 21:54:12 Processed 126000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:14 Sent 127000 requests
+2025/06/03 21:54:14 Processed 127000 requests
+2025/06/03 21:54:15 Sent 128000 requests
+2025/06/03 21:54:15 Processed 128000 requests
+2025/06/03 21:54:16 Sent 129000 requests
+2025/06/03 21:54:16 Processed 129000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:18 Sent 130000 requests
+2025/06/03 21:54:18 Processed 130000 requests
+2025/06/03 21:54:19 Sent 131000 requests
+2025/06/03 21:54:19 Processed 131000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:20 Sent 132000 requests
+2025/06/03 21:54:20 Processed 132000 requests
+2025/06/03 21:54:22 Sent 133000 requests
+2025/06/03 21:54:22 Processed 133000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:23 Sent 134000 requests
+2025/06/03 21:54:23 Processed 134000 requests
+2025/06/03 21:54:24 Sent 135000 requests
+2025/06/03 21:54:24 Processed 135000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:25 Sent 136000 requests
+2025/06/03 21:54:25 Processed 136000 requests
+2025/06/03 21:54:27 Sent 137000 requests
+2025/06/03 21:54:27 Processed 137000 requests
+2025/06/03 21:54:28 Sent 138000 requests
+2025/06/03 21:54:28 Processed 138000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:29 Sent 139000 requests
+2025/06/03 21:54:29 Processed 139000 requests
+2025/06/03 21:54:31 Sent 140000 requests
+2025/06/03 21:54:31 Processed 140000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:32 Sent 141000 requests
+2025/06/03 21:54:32 Processed 141000 requests
+2025/06/03 21:54:33 Sent 142000 requests
+2025/06/03 21:54:33 Processed 142000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:35 Sent 143000 requests
+2025/06/03 21:54:35 Processed 143000 requests
+2025/06/03 21:54:36 Sent 144000 requests
+2025/06/03 21:54:36 Processed 144000 requests
+2025/06/03 21:54:37 Sent 145000 requests
+2025/06/03 21:54:37 Processed 145000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:38 Sent 146000 requests
+2025/06/03 21:54:38 Processed 146000 requests
+2025/06/03 21:54:40 Sent 147000 requests
+2025/06/03 21:54:40 Processed 147000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:41 Sent 148000 requests
+2025/06/03 21:54:41 Processed 148000 requests
+2025/06/03 21:54:42 Sent 149000 requests
+2025/06/03 21:54:42 Processed 149000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:44 Sent 150000 requests
+2025/06/03 21:54:44 Processed 150000 requests
+2025/06/03 21:54:45 Sent 151000 requests
+2025/06/03 21:54:45 Processed 151000 requests
+2025/06/03 21:54:46 Sent 152000 requests
+2025/06/03 21:54:46 Processed 152000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:48 Sent 153000 requests
+2025/06/03 21:54:48 Processed 153000 requests
+2025/06/03 21:54:49 Sent 154000 requests
+2025/06/03 21:54:49 Processed 154000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:50 Sent 155000 requests
+2025/06/03 21:54:50 Processed 155000 requests
+2025/06/03 21:54:51 Sent 156000 requests
+2025/06/03 21:54:51 Processed 156000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:53 Sent 157000 requests
+2025/06/03 21:54:53 Processed 157000 requests
+2025/06/03 21:54:54 Sent 158000 requests
+2025/06/03 21:54:54 Processed 158000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:55 Sent 159000 requests
+2025/06/03 21:54:55 Processed 159000 requests
+2025/06/03 21:54:57 Sent 160000 requests
+2025/06/03 21:54:57 Processed 160000 requests
+2025/06/03 21:54:58 Sent 161000 requests
+2025/06/03 21:54:58 Processed 161000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:54:59 Sent 162000 requests
+2025/06/03 21:54:59 Processed 162000 requests
+2025/06/03 21:55:01 Sent 163000 requests
+2025/06/03 21:55:01 Processed 163000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:02 Sent 164000 requests
+2025/06/03 21:55:02 Processed 164000 requests
+2025/06/03 21:55:03 Sent 165000 requests
+2025/06/03 21:55:03 Processed 165000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:04 Sent 166000 requests
+2025/06/03 21:55:04 Processed 166000 requests
+2025/06/03 21:55:06 Sent 167000 requests
+2025/06/03 21:55:06 Processed 167000 requests
+2025/06/03 21:55:07 Sent 168000 requests
+2025/06/03 21:55:07 Processed 168000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:08 Sent 169000 requests
+2025/06/03 21:55:08 Processed 169000 requests
+2025/06/03 21:55:10 Sent 170000 requests
+2025/06/03 21:55:10 Processed 170000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:11 Sent 171000 requests
+2025/06/03 21:55:11 Processed 171000 requests
+2025/06/03 21:55:12 Sent 172000 requests
+2025/06/03 21:55:12 Processed 172000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:14 Sent 173000 requests
+2025/06/03 21:55:14 Processed 173000 requests
+2025/06/03 21:55:15 Sent 174000 requests
+2025/06/03 21:55:15 Processed 174000 requests
+2025/06/03 21:55:16 Sent 175000 requests
+2025/06/03 21:55:16 Processed 175000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:17 Sent 176000 requests
+2025/06/03 21:55:17 Processed 176000 requests
+2025/06/03 21:55:19 Sent 177000 requests
+2025/06/03 21:55:19 Processed 177000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:20 Sent 178000 requests
+2025/06/03 21:55:20 Processed 178000 requests
+2025/06/03 21:55:21 Sent 179000 requests
+2025/06/03 21:55:21 Processed 179000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:23 Sent 180000 requests
+2025/06/03 21:55:23 Processed 180000 requests
+2025/06/03 21:55:24 Sent 181000 requests
+2025/06/03 21:55:24 Processed 181000 requests
+2025/06/03 21:55:25 Sent 182000 requests
+2025/06/03 21:55:25 Processed 182000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:27 Sent 183000 requests
+2025/06/03 21:55:27 Processed 183000 requests
+2025/06/03 21:55:28 Sent 184000 requests
+2025/06/03 21:55:28 Processed 184000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:29 Sent 185000 requests
+2025/06/03 21:55:29 Processed 185000 requests
+2025/06/03 21:55:30 Sent 186000 requests
+2025/06/03 21:55:31 Processed 186000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:32 Sent 187000 requests
+2025/06/03 21:55:32 Processed 187000 requests
+2025/06/03 21:55:33 Sent 188000 requests
+2025/06/03 21:55:33 Processed 188000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:34 Sent 189000 requests
+2025/06/03 21:55:34 Processed 189000 requests
+2025/06/03 21:55:36 Sent 190000 requests
+2025/06/03 21:55:36 Processed 190000 requests
+2025/06/03 21:55:37 Sent 191000 requests
+2025/06/03 21:55:37 Processed 191000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:38 Sent 192000 requests
+2025/06/03 21:55:38 Processed 192000 requests
+2025/06/03 21:55:40 Sent 193000 requests
+2025/06/03 21:55:40 Processed 193000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:41 Sent 194000 requests
+2025/06/03 21:55:41 Processed 194000 requests
+2025/06/03 21:55:42 Sent 195000 requests
+2025/06/03 21:55:42 Processed 195000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:44 Sent 196000 requests
+2025/06/03 21:55:44 Processed 196000 requests
+2025/06/03 21:55:45 Sent 197000 requests
+2025/06/03 21:55:45 Processed 197000 requests
+2025/06/03 21:55:46 Sent 198000 requests
+2025/06/03 21:55:46 Processed 198000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:47 Sent 199000 requests
+2025/06/03 21:55:47 Processed 199000 requests
+2025/06/03 21:55:49 Sent 200000 requests
+2025/06/03 21:55:49 Processed 200000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:50 Sent 201000 requests
+2025/06/03 21:55:50 Processed 201000 requests
+2025/06/03 21:55:51 Sent 202000 requests
+2025/06/03 21:55:51 Processed 202000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:53 Sent 203000 requests
+2025/06/03 21:55:53 Processed 203000 requests
+2025/06/03 21:55:54 Sent 204000 requests
+2025/06/03 21:55:54 Processed 204000 requests
+2025/06/03 21:55:55 Sent 205000 requests
+2025/06/03 21:55:55 Processed 205000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:57 Sent 206000 requests
+2025/06/03 21:55:57 Processed 206000 requests
+2025/06/03 21:55:58 Sent 207000 requests
+2025/06/03 21:55:58 Processed 207000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:55:59 Sent 208000 requests
+2025/06/03 21:55:59 Processed 208000 requests
+2025/06/03 21:56:00 Sent 209000 requests
+2025/06/03 21:56:00 Processed 209000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:02 Sent 210000 requests
+2025/06/03 21:56:02 Processed 210000 requests
+2025/06/03 21:56:03 Sent 211000 requests
+2025/06/03 21:56:03 Processed 211000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:04 Sent 212000 requests
+2025/06/03 21:56:04 Processed 212000 requests
+2025/06/03 21:56:06 Sent 213000 requests
+2025/06/03 21:56:06 Processed 213000 requests
+2025/06/03 21:56:07 Sent 214000 requests
+2025/06/03 21:56:07 Processed 214000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:08 Sent 215000 requests
+2025/06/03 21:56:08 Processed 215000 requests
+2025/06/03 21:56:10 Sent 216000 requests
+2025/06/03 21:56:10 Processed 216000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:11 Sent 217000 requests
+2025/06/03 21:56:11 Processed 217000 requests
+2025/06/03 21:56:12 Sent 218000 requests
+2025/06/03 21:56:12 Processed 218000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:13 Sent 219000 requests
+2025/06/03 21:56:13 Processed 219000 requests
+2025/06/03 21:56:15 Sent 220000 requests
+2025/06/03 21:56:15 Processed 220000 requests
+2025/06/03 21:56:16 Sent 221000 requests
+2025/06/03 21:56:16 Processed 221000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:17 Sent 222000 requests
+2025/06/03 21:56:17 Processed 222000 requests
+2025/06/03 21:56:19 Sent 223000 requests
+2025/06/03 21:56:19 Processed 223000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:20 Sent 224000 requests
+2025/06/03 21:56:20 Processed 224000 requests
+2025/06/03 21:56:21 Sent 225000 requests
+2025/06/03 21:56:21 Processed 225000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:23 Sent 226000 requests
+2025/06/03 21:56:23 Processed 226000 requests
+2025/06/03 21:56:24 Sent 227000 requests
+2025/06/03 21:56:24 Processed 227000 requests
+2025/06/03 21:56:25 Sent 228000 requests
+2025/06/03 21:56:25 Processed 228000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/03 21:56:26 Sent 229000 requests
+2025/06/03 21:56:26 Processed 229000 requests
+2025/06/03 21:56:28 Sent 230000 requests
+2025/06/03 21:56:28 Processed 230000 requests
+2025/06/03 21:56:28 Finished all requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+########## Total ##########
+Total Number of Requests: 230414
+Successful Requests: 230414
+Error Responses: 0
+Average Latency: 4.734637495742446e+06
+########## ListItems ##########
+Total Number of Requests: 230414
+Successful Requests: 230414
+Error Responses: 0
+Average Latency: 4.734637495742446e+06
+2025/06/03 21:56:28 INFO wlgen.proc wlgen.service exited
+2025/06/03 21:56:28 INFO wlgen.proc exiting
++ popd
+~/blueprint/examples/sockshop

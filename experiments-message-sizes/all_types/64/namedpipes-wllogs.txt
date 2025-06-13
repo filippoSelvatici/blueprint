@@ -1,0 +1,231 @@
++ pushd build
+~/blueprint/examples/sockshop/build ~/blueprint/examples/sockshop
++ set -a
++ source .env
+++ CART_DB_BIND_ADDR=0.0.0.0:12345
+++ CART_DB_DIAL_ADDR=cart_db:12345
+++ CART_SERVICE_NP_BIND_ADDR=0.0.0.0:12346
+++ CART_SERVICE_NP_DIAL_ADDR=cart_service:12346
+++ CATALOGUE_DB_BIND_ADDR=0.0.0.0:12347
+++ CATALOGUE_DB_DIAL_ADDR=catalogue_db:12347
+++ CATALOGUE_SERVICE_NP_BIND_ADDR=0.0.0.0:12348
+++ CATALOGUE_SERVICE_NP_DIAL_ADDR=catalogue_service:12348
+++ FRONTEND_HTTP_BIND_ADDR=0.0.0.0:12349
+++ FRONTEND_HTTP_DIAL_ADDR=frontend:12349
+++ ORDER_DB_BIND_ADDR=0.0.0.0:12350
+++ ORDER_DB_DIAL_ADDR=order_db:12350
+++ ORDER_SERVICE_NP_BIND_ADDR=0.0.0.0:12351
+++ ORDER_SERVICE_NP_DIAL_ADDR=order_service:12351
+++ PAYMENT_SERVICE_NP_BIND_ADDR=0.0.0.0:12352
+++ PAYMENT_SERVICE_NP_DIAL_ADDR=payment_service:12352
+++ SHIPPING_DB_BIND_ADDR=0.0.0.0:12353
+++ SHIPPING_DB_DIAL_ADDR=shipping_db:12353
+++ SHIPPING_SERVICE_NP_BIND_ADDR=0.0.0.0:12354
+++ SHIPPING_SERVICE_NP_DIAL_ADDR=shipping_service:12354
+++ USER_DB_BIND_ADDR=0.0.0.0:12355
+++ USER_DB_DIAL_ADDR=user_db:12355
+++ USER_SERVICE_NP_BIND_ADDR=0.0.0.0:12356
+++ USER_SERVICE_NP_DIAL_ADDR=user_service:12356
++ set +a
++ ./wlgen/wlgen_proc/wlgen_proc/wlgen_proc
+2025/06/10 12:29:28 INFO Running wlgen.proc
+2025/06/10 12:29:28 INFO frontend.http.dial_addr = frontend:12349
+2025/06/10 12:29:28 INFO wlgen.proc built wlgen.proc.stdoutmetriccollector (*opentelemetry.StdoutMetricCollector)
+2025/06/10 12:29:28 INFO wlgen.proc built wlgen.proc.logger (*slogger.SLogger)
+2025/06/10 12:29:28 INFO wlgen.proc built frontend.clientpool (*pool.Frontend_ClientPool)
+2025/06/10 12:29:28 INFO wlgen.proc built frontend.client (*pool.Frontend_ClientPool)
+2025/06/10 12:29:28 INFO wlgen.proc built wlgen.service (*workloadgen.complexWldGen)
+2025/06/10 12:29:28 INFO wlgen.proc running wlgen.service
+2025/06/10 12:29:28 INFO wlgen.proc built frontend.http.dial_addr (string) = frontend:12349
+2025/06/10 12:29:28 INFO frontend.clientpool.0 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Application initialized successfully.
+2025/06/10 12:29:32 Target throughput 64
+2025/06/10 12:29:32 Ticking after every 15.625ms
+2025/06/10 12:29:32 INFO frontend.clientpool.1 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.2 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.3 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.4 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.5 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.6 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.7 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.8 built frontend.http_client (*http.Frontend_HTTPClient)
+2025/06/10 12:29:32 INFO frontend.clientpool.9 built frontend.http_client (*http.Frontend_HTTPClient)
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+2025/06/10 12:29:48 Sent 1000 requests
+2025/06/10 12:29:48 Processed 1000 requests
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+2025/06/10 12:30:03 Sent 2000 requests
+2025/06/10 12:30:03 Processed 2000 requests
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+2025/06/10 12:30:19 Sent 3000 requests
+2025/06/10 12:30:19 Processed 3000 requests
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+Error in NewOrder: StatusCode was 500
+{"Resource":[{"Key":"service.name","Value":{"Type":"STRING","Value":"unknown_service:wlgen_proc"}},{"Key":"telemetry.sdk.language","Value":{"Type":"STRING","Value":"go"}},{"Key":"telemetry.sdk.name","Value":{"Type":"STRING","Value":"opentelemetry"}},{"Key":"telemetry.sdk.version","Value":{"Type":"STRING","Value":"1.26.0"}}],"ScopeMetrics":null}
+2025/06/10 12:30:32 Finished all requests
+########## Total ##########
+Total Number of Requests: 3827
+Successful Requests: 3725
+Error Responses: 102
+Average Latency: 4.646742859187353e+08
+########## ListItems ##########
+Total Number of Requests: 540
+Successful Requests: 540
+Error Responses: 0
+Average Latency: 4.151519761111111e+08
+########## Register ##########
+Total Number of Requests: 121
+Successful Requests: 121
+Error Responses: 0
+Average Latency: 3.418904376859504e+08
+########## PostCard ##########
+Total Number of Requests: 71
+Successful Requests: 71
+Error Responses: 0
+Average Latency: 3.612109354084507e+08
+########## GetCart ##########
+Total Number of Requests: 546
+Successful Requests: 546
+Error Responses: 0
+Average Latency: 4.202238611703297e+08
+########## ListTags ##########
+Total Number of Requests: 569
+Successful Requests: 569
+Error Responses: 0
+Average Latency: 4.8607421786467487e+08
+########## AddItem ##########
+Total Number of Requests: 1495
+Successful Requests: 1495
+Error Responses: 0
+Average Latency: 4.666312194347826e+08
+########## NewOrder ##########
+Total Number of Requests: 406
+Successful Requests: 304
+Error Responses: 102
+Average Latency: 5.168257696600985e+08
+########## PostAddress ##########
+Total Number of Requests: 79
+Successful Requests: 79
+Error Responses: 0
+Average Latency: 9.322571143797468e+08
+2025/06/10 12:30:32 INFO wlgen.proc wlgen.service exited
+2025/06/10 12:30:32 INFO wlgen.proc exiting
++ popd
+~/blueprint/examples/sockshop
