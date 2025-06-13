@@ -77,7 +77,7 @@ func (q *queueMasterImpl) Run(ctx context.Context) error {
 							return err
 						} else {
 							slog.Error(fmt.Sprintf("Unable to send shipment %v due to %v; waiting 1 second then retrying", shipment.ID, err))
-							time.Sleep(1 * time.Second)
+							time.Sleep(10 * time.Millisecond)
 						}
 					} else {
 						break

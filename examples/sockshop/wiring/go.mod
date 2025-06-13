@@ -13,6 +13,7 @@ require github.com/blueprint-uservices/blueprint/examples/sockshop/tests v0.0.0
 require (
 	github.com/blueprint-uservices/blueprint/examples/sockshop/workflow v0.0.0
 	github.com/blueprint-uservices/blueprint/examples/sockshop/workload v0.0.0
+	github.com/blueprint-uservices/blueprint/examples/sockshop/cmplx_workload v0.0.0
 )
 
 require (
@@ -58,3 +59,5 @@ replace github.com/blueprint-uservices/blueprint/examples/sockshop/workflow => .
 replace github.com/blueprint-uservices/blueprint/examples/sockshop/tests => ../tests
 
 replace github.com/blueprint-uservices/blueprint/examples/sockshop/workload => ../workload
+
+replace github.com/blueprint-uservices/blueprint/examples/sockshop/cmplx_workload => ../cmplx_workload

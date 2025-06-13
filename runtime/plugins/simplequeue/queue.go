@@ -1,7 +1,7 @@
 // Package simplequeue implements an simple in-memory [backend.Queue] that internally
-// uses a golang channel of capacity 10 for passing items from producer to consumer.
+// uses a golang channel of capacity 5000000 for passing items from producer to consumer.
 //
-// Calls to [backend.Queue.Push] will block once the queue capacity reaches 10.
+// Calls to [backend.Queue.Push] will block once the queue capacity reaches 5000000.
 package simplequeue
 
 import (
@@ -16,11 +16,11 @@ type SimpleQueue struct {
 	q chan any
 }
 
-// Instantiates a [backend.Queue] that internally uses a golang channel of capacity 10.
+// Instantiates a [backend.Queue] that internally uses a golang channel of capacity 5000000.
 //
-// Calls to [q.Push] will block once the queue capacity reaches 10.
+// Calls to [q.Push] will block once the queue capacity reaches 5000000.
 func NewSimpleQueue(ctx context.Context) (q *SimpleQueue, err error) {
-	return newSimpleQueueWithCapacity(10), nil
+	return newSimpleQueueWithCapacity(5000000), nil
 }
 
 // Instantiates a [simpleQueue] with the specified capacity.

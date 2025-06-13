@@ -2,6 +2,7 @@ package specs
 
 import (
 	"github.com/blueprint-uservices/blueprint/blueprint/pkg/wiring"
+	"github.com/blueprint-uservices/blueprint/examples/sockshop/cmplx_workload/workloadgen"
 	"github.com/blueprint-uservices/blueprint/examples/sockshop/workflow/cart"
 	"github.com/blueprint-uservices/blueprint/examples/sockshop/workflow/catalogue"
 	"github.com/blueprint-uservices/blueprint/examples/sockshop/workflow/frontend"
@@ -10,7 +11,6 @@ import (
 	"github.com/blueprint-uservices/blueprint/examples/sockshop/workflow/queuemaster"
 	"github.com/blueprint-uservices/blueprint/examples/sockshop/workflow/shipping"
 	"github.com/blueprint-uservices/blueprint/examples/sockshop/workflow/user"
-	"github.com/blueprint-uservices/blueprint/examples/sockshop/workload/workloadgen"
 	"github.com/blueprint-uservices/blueprint/plugins/clientpool"
 	"github.com/blueprint-uservices/blueprint/plugins/cmdbuilder"
 	"github.com/blueprint-uservices/blueprint/plugins/goproc"
@@ -82,9 +82,9 @@ func makeGrpcSpec(spec wiring.WiringSpec) ([]string, error) {
 	applyDefaults(catalogue_service)
 
 	frontend_service := workflow.Service[frontend.Frontend](spec, "frontend", user_service, catalogue_service, cart_service, order_service)
-	applyDefaults(frontend_service)
+	applyDefaults(frontend_service, true)
 
-	wlgen := workload.Generator[workloadgen.SimpleWorkload](spec, "wlgen", frontend_service)
+	wlgen := workload.Generator[workloadgen.ComplexWorkload](spec, "wlgen", frontend_service)
 
 	// Instantiate starting with the frontend which will trigger all other services to be instantiated
 	// Also include the tests and wlgen

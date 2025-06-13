@@ -44,7 +44,7 @@ type (
 		GetUsers(ctx context.Context, id string) ([]User, error)
 
 		// Insert a (possibly new) user into the DB.  Returns the user's ID
-		PostUser(ctx context.Context, user User) (string, error)
+		PostUser(ctx context.Context, u User) (string, error)
 
 		// Look up an address by id.  If id is the empty string, returns all addresses.
 		GetAddresses(ctx context.Context, id string) ([]Address, error)
