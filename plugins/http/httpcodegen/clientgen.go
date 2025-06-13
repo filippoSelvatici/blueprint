@@ -25,7 +25,7 @@ func GenerateClient(builder golang.ModuleBuilder, service *gocode.ServiceInterfa
 	}
 
 	client.Imports.AddPackages(
-		"net/http", "encoding/json", "context", "net/url", "fmt", "io", "errors",
+		"net/http", "encoding/json", "context", "net/url", "fmt", "io", "errors", "strings",
 	)
 
 	slog.Info(fmt.Sprintf("Generating %v/%v.go", client.Package.PackageName, client.Name))
@@ -66,7 +66,8 @@ func New_{{.Name}}(ctx context.Context, serverAddress string) (*{{.Name}}, error
 	}
 	c := &{{.Name}}{}
 	c.Client = client
-	c.ServerAddress = "http://" + serverAddress
+	server_port := strings.Split(serverAddress, ":")[1]
+	c.ServerAddress = "http://127.0.0.1:" + server_port
 	return c, nil
 }
 
