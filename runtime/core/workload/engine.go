@@ -78,6 +78,7 @@ func (e *Engine) RunOpenLoop(ctx context.Context) {
 
 	var wg sync.WaitGroup
 	go func() {
+		counter := 0
 		src := rand.NewSource(0)
 		g := distuv.Poisson{100, src}
 		timer := time.NewTimer(0 * time.Second)
@@ -98,6 +99,10 @@ func (e *Engine) RunOpenLoop(ctx context.Context) {
 				next = next.Add(time.Duration(g.Rand()*tick_every/100) * time.Nanosecond)
 				waitt := next.Sub(time.Now())
 				timer.Reset(waitt)
+				counter += 1
+				if counter%1000 == 0 {
+					log.Println("Sent", counter, "requests")
+				}
 			}
 		}
 	}()
@@ -115,34 +120,65 @@ func (e *Engine) RunOpenLoop(ctx context.Context) {
 
 // PrintStats prints the collected statistics and writes individual request information to the provided outfile in CSV format.
 func (e *Engine) PrintStats() error {
-	var num_errors int64
-	var num_reqs int64
-	var sum_durations int64
-	stat_strings := []string{}
+	num_errors := make(map[string]int64)
+	num_reqs := make(map[string]int64)
+	sum_durations := make(map[string]int64)
+	stat_strings := make(map[string][]string)
 	for _, stat := range e.Stats {
-		num_reqs += 1
+		api_name := stat.ApiName
+		num_reqs[api_name] += 1
 		if stat.IsError {
-			num_errors += 1
+			num_errors[api_name] += 1
 		}
-		sum_durations += stat.Duration
-		stat_strings = append(stat_strings, fmt.Sprintf("%d,%d,%t", stat.Start, stat.Duration, stat.IsError))
+		sum_durations[api_name] += stat.Duration
+		if stat_strings[api_name] == nil {
+			stat_strings[api_name] = make([]string, 0)
+		}
+		stat_strings[api_name] = append(stat_strings[api_name], fmt.Sprintf("%d,%d,%t", stat.Start, stat.Duration, stat.IsError))
+	}
+	var tot_num_errors int64
+	var tot_num_reqs int64
+	var tot_sum_durations int64
+	for api_name := range num_reqs {
+		tot_num_errors += num_errors[api_name]
+		tot_num_reqs += num_reqs[api_name]
+		tot_sum_durations += sum_durations[api_name]
 	}
 
-	fmt.Println("Total Number of Requests:", num_reqs)
-	fmt.Println("Successful Requests:", num_reqs-num_errors)
-	fmt.Println("Error Responses:", num_errors)
-	fmt.Println("Average Latency:", float64(sum_durations)/float64(num_reqs))
-	// Write to file
-	header := "Start,Duration,IsError\n"
-	data := header + strings.Join(stat_strings, "\n")
 	f, err := os.OpenFile(e.OutFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)
 	if err != nil {
 		return err
 	}
 	defer f.Close()
-	_, err = f.WriteString(data)
+
+	print_stats := func(apiName string, num_reqs int64, num_errors int64, sum_durations int64, stat_strings []string) error {
+		fmt.Println("##########", apiName, "##########")
+		fmt.Println("Total Number of Requests:", num_reqs)
+		fmt.Println("Successful Requests:", num_reqs-num_errors)
+		fmt.Println("Error Responses:", num_errors)
+		fmt.Println("Average Latency:", float64(sum_durations)/float64(num_reqs))
+		if len(stat_strings) > 0 {
+			// Write to file
+			header := "\nMETHOD " + apiName + "\nStart,Duration,IsError\n"
+			data := header + strings.Join(stat_strings, "\n")
+			_, err = f.WriteString(data)
+			if err != nil {
+				return err
+			}
+		}
+		return nil
+	}
+
+	err = print_stats("Total", tot_num_reqs, tot_num_errors, tot_sum_durations, nil)
 	if err != nil {
 		return err
+	}
+
+	for api_name := range num_reqs {
+		err = print_stats(api_name, num_reqs[api_name], num_errors[api_name], sum_durations[api_name], stat_strings[api_name])
+		if err != nil {
+			return err
+		}
 	}
 	return nil
 }

@@ -5,4 +5,5 @@ type Stat struct {
 	Start    int64
 	Duration int64
 	IsError  bool
+	ApiName  string
 }
